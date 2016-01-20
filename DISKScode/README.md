@@ -21,7 +21,7 @@
 	
 	2.1 Density Profile options:  
 	
-	-d, --denstype TYPE  
+		-d, --denstype TYPE  
 		create the density profile specified by TYPE.  
 
 		TYPE: density profile type               function  
@@ -37,13 +37,16 @@
 	-S, --coefficient VALU  
 		change the parameter S to VALUE.  
 
-	Examples:  
-	Enter "./a.out -d 3 -S 4.0".  
-	The density profile is set 4e^(-r).  
-	Enter "./a.out -d 1 -S 2.0 -P -1.2".  
-	The density profile is set 2r^(-1.2).  
-	Enter "./a.out -S 2.0 -P -1.2".  
-	The density profile is set 2r^(-1.2).  
+		Examples:  
+		
+		Enter "./a.out -d 3 -S 4.0".  
+		The density profile is set 4e^(-r).  
+	
+		Enter "./a.out -d 1 -S 2.0 -P -1.2".  
+		The density profile is set 2r^(-1.2).  
+	
+		Enter "./a.out -S 2.0 -P -1.2".  
+		The density profile is set 2r^(-1.2).  
 
 	If you want to choose user defined density profile, please edit  
 	"userdefined.h". Some examples are written in the file.  
