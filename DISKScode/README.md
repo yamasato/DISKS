@@ -186,10 +186,10 @@ us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 	The mass is non-number or negative. This can be avoided to change the parameter of option 
 	-C or -I.  
 		
-	4.6 Error: Fail to open (file name). Please change the filename by the option -f.  
+	4.6 Error: Fail to open 'file name'. Please change the filename by the option -f.  
 	The file-name is invalid. Please change file name.  
 	
-	4.7 Error: Invalid option '(option)'.  
+	4.7 Error: Invalid option 'option'.  
 	You choose an invalid option, but it dose not effect the program.  
 	
 	4.8 Error: Invalid type of the density profile. Please change the parameter of the option -d.  
