@@ -5,7 +5,5 @@
 
 Please enter "make" only once and "./a.out".  
 
-
-
 2. DESCRIPTION  
 
