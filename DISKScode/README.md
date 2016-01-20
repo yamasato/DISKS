@@ -6,4 +6,103 @@
 Please enter "make" only once and "./a.out".  
 2.DESCRIPTION  
 
+In default, the parameters are given below  
+	density profile = r^(-1)  
+	inner edge = 1.0  
+	outer edge = 4.0  
+	cut   edge = 1.0  
+	the number of ring at cut edge = 20   
+	the number of particles in a ring = 40  
+	(it is used with only power is -2 at cut edge.)  
+	tolerance = 10^(-8)  
+
+	
+2.1 Density Profile options:  
+	
+	-d, --denstype TYPE  
+		create the density profile specified by TYPE.  
+
+		TYPE: density profile type               function  
+		1   : power-law except slope = -2        S * r^(P)  
+		2   : power-law with slope = -2          S * r^(-2)  
+		3   : exponential density profile        S * e^(P * r)  
+		4   : post giant impact disk             S * (r - 1) * e^(P * r)  
+		5   : user defined  
+
+	-P, --powernumber VALU  
+		change the parameter P to VALUE.  
+
+	-S, --coefficient VALU  
+		change the parameter S to VALUE.  
+
+	Examples:  
+	Enter "./a.out -d 3 -S 4.0".  
+	The density profile is set 4e^(-r).  
+	Enter "./a.out -d 1 -S 2.0 -P -1.2".  
+	The density profile is set 2r^(-1.2).  
+	Enter "./a.out -S 2.0 -P -1.2".  
+	The density profile is set 2r^(-1.2).  
+
+	If you want to choose user defined density profile, please edit  
+	"userdefined.h". Some examples are written in the file.  
+	
+	
+2.2 Disk Parameters options:  
+
+	-I, --inneredge VALU  
+		change the position of inner edge to VALUE.  
+		It must be a non-negative number or 0.  
+
+	-O, --outeredge VALU  
+		change the position of outer edge to VALUE.  
+		It must be larger than 0.  
+
+	-C, --cutedge VALU  
+		change the position of cut edge to VALUE.   
+		It must be larger than 0.  
+
+	-i, --icut VALU  
+		change the number of ring at cut edge to VALUE.  
+		It must be integer greater than 0.  
+
+	-n, --npzero VALU  
+		change the number of particles in a ring to VALUE.  
+		It must be integer greater than 0 and is used with only power is -2 
+		at cut edge.  
+
+	Examples:  
+	Enter "./a.out -I 2.0 -O 5.0 -C 3.0 -i 30".  
+	A disk whose range is r = [2.0:5.0] is generated.  
+	Placement of particles is stated at r = 3.0.  
+	The number of rings at the cut edge is set to 30.  
+	Enter "./a.out -O 5.0 -i 30".  
+	A disk whose raige is $r =$ [1.0:5.0] is generated.  
+	Placement of particles is stated at r = 1.0.  
+	The number of rings at the cut edge is set to 30.  
+
+
+2.3 Other options:  
+	 
+	-o --output FILE
+        	write result to FILE instead of standard output [filename].  
+	
+		Example:  
+		Enter "./a.out -o test.dat".  
+
+	-t --tolerance VALE  
+		change the value of tolerance to VALUE.  
+	
+	-p --outputdens  
+		calculate the density of particles.  
+		Note that there are large error near edges because of   
+		low-order of SPH approximation. In addition, it takes N^2  
+		times, where$ N is the number of particles.  
+
+	-h --help  
+		display help.  
+
+Examples:  
+
+Enter "./a.out ./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
+You can get the left-hand side in figure 5 in the article.  
 
