@@ -9,14 +9,15 @@
 2. DESCRIPTION  
   
 	In default, the parameters are given below  
-		 * density profile = r^(-1)  
-		 * inner edge = 1.0  
-		 * outer edge = 4.0  
-		 * cut   edge = 1.0  
-		 * the number of ring at cut edge = 20   
-		 * the number of particles in a ring = 40  
-		 * (it is used with only power is -2 at cut edge.)  
-		 * tolerance = 10^(-8)  
+		* density profile = r^(-1)  
+		* inner edge = 1.0  
+		* outer edge = 4.0  
+		* cut   edge = 1.0  
+		* the number of ring at cut edge = 20   
+		* the number of particles in a ring = 40  
+		* (it is used with only power is -2 at cut edge.)  
+		* tolerance = 10^(-8)  
+		* PluginフォルダにFastCSVフォルダを設置します。
   
 	
 	2.1 Density Profile options:  
@@ -202,9 +203,3 @@
 We describe the detail of this algorithm in Yamamoto et al. (in submitted).  
 
 
-##インストール
-* PluginフォルダにFastCSVフォルダを設置します。
-* app/Config/bootstrap.php にて以下の記述を行う。
-    * CakePlugin::load('FastCSV'); 
-    * 目的のコントローラにて以下の記述を行う。
-        * public $helpers = array('FastCSV.FastCSV');
