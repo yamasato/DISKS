@@ -10,12 +10,12 @@ us. Our e-mail address is <yamamoto.s.an-at-geo.titech.ac.jp>.
 
 ## Usage
 
-1 SYNOPSIS  
+1. SYNOPSIS  
 
 Please enter "make" only once and "./a.out".  
 
 
-2 DESCRIPTION  
+2. DESCRIPTION  
 
 In default, the parameters are given below  
 	density profile = r^(-1)  
@@ -28,9 +28,9 @@ In default, the parameters are given below
 	tolerance = 10^(-8)  
 
 	
-2.1 Density Profile options:  
+	2.1 Density Profile options:  
 	
-	-d, --denstype=TYPE  
+	-d, --denstype TYPE  
 		create the density profile specified by TYPE.  
 
 		TYPE: density profile type               function  
@@ -40,43 +40,43 @@ In default, the parameters are given below
 		4   : post giant impact disk             S * (r - 1) * e^(P * r)  
 		5   : user defined  
 
-	-P, --powernumber=VALU  
+	-P, --powernumber VALU  
 		change the parameter P to VALUE.  
 
-	-S, --coefficient=VALU  
+	-S, --coefficient VALU  
 		change the parameter S to VALUE.  
 
 	Examples:  
-	*Enter "./a.out -d 3 -S 4.0".  
+	Enter "./a.out -d 3 -S 4.0".  
 	The density profile is set 4e^(-r).  
-	*Enter "./a.out -d 1 -S 2.0 -P -1.2".  
+	Enter "./a.out -d 1 -S 2.0 -P -1.2".  
 	The density profile is set 2r^(-1.2).  
-	*Enter "./a.out -S 2.0 -P -1.2".  
+	Enter "./a.out -S 2.0 -P -1.2".  
 	The density profile is set 2r^(-1.2).  
 
 	If you want to choose user defined density profile, please edit  
 	"userdefined.h". Some examples are written in the file.  
 	
 	
-2.2 Disk Parameters options:  
+	2.2 Disk Parameters options:  
 
-	-I, --inneredge=VALU  
+	-I, --inneredge VALU  
 		change the position of inner edge to VALUE.  
 		It must be a non-negative number or 0.  
 
-	-O, --outeredge=VALU  
+	-O, --outeredge VALU  
 		change the position of outer edge to VALUE.  
 		It must be larger than 0.  
 
-	-C, --cutedge=VALU  
+	-C, --cutedge VALU  
 		change the position of cut edge to VALUE.   
 		It must be larger than 0.  
 
-	-i, --icut=VALU  
+	-i, --icut VALU  
 		change the number of ring at cut edge to VALUE.  
 		It must be integer greater than 0.  
 
-	-n, --npzero=VALU  
+	-n, --npzero VALU  
 		change the number of particles in a ring to VALUE.  
 		It must be integer greater than 0 and is used with only power is -2 
 		at cut edge.  
@@ -92,15 +92,15 @@ In default, the parameters are given below
 	The number of rings at the cut edge is set to 30.  
 
 
-2.3 Other options:  
+	2.3 Other options:  
 	 
-	-o --output=FIL  E
+	-o --output FILE
         	write result to FILE instead of standard output [filename].  
 	
 		Example:  
 		Enter "./a.out -o test.dat".  
 
-	-t --tolerance=VALE  
+	-t --tolerance VALE  
 		change the value of tolerance to VALUE.  
 	
 	-p --outputdens  
@@ -146,14 +146,14 @@ The number of rings at cut edge is set to 20.
 The number of particles for each ring is set to 40.  
 
 
-3 Output Data  
+3. Output Data  
 
 The parameters of particles are outputted. From left to right, the values mean  
 (particle id, x-coordinate, y-coordinate, radius, density).  
 If you do not choose the option -p, values of density is set to 0.  
 
 
-4 Errors  
+4. Errors  
 
 If there are errors in this program, an error message is outputted.  
 	
