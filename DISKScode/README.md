@@ -28,8 +28,8 @@ us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 	
 	2.1 Density Profile options:  
 	
-	-d, --denstype TYPE  
-	create the density profile specified by TYPE.  
+	    -d, --denstype TYPE  
+	    create the density profile specified by TYPE.  
 
 	|TYPE| density profile type             | function                |
 	|:---|:---------------------------------|:------------------------|
