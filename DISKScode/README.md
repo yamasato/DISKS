@@ -106,38 +106,38 @@
 	-h --help  
 		display help.  
 
-	Examples:  
+		Examples:  
 
-	Enter "./a.out ./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
-	You can get the left-hand side in figure 5 in the article.  
+		Enter "./a.out ./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
+		You can get the left-hand side in figure 5 in the article.  
+		
+		Enter "./a.out -P -1.9 -i 60 -O 5.0 ".  
+		You can get the right-hand side in figure 5 in the article.  
+		
+		Enter "./a.out -P -1.45 ".  
+		You can get the right-hand side in figure 6 in the article.  
+		
+		Enter "./a.out -d 3 -P -1.0 -i 15 ".  
+		You can get the left-hand side in figure 9 in the article.  
 	
-	Enter "./a.out -P -1.9 -i 60 -O 5.0 ".  
-	You can get the right-hand side in figure 5 in the article.  
+		Enter "./a.out -d 4 -P -1.0 -I 2.0 -C 2.0 -i 10 ".  
+		You can get the right-hand side in figure 9 in the article.  
 	
-	Enter "./a.out -P -1.45 ".  
-	You can get the right-hand side in figure 6 in the article.  
-	
-	Enter "./a.out -d 3 -P -1.0 -i 15 ".  
-	You can get the left-hand side in figure 9 in the article.  
-	
-	Enter "./a.out -d 4 -P -1.0 -I 2.0 -C 2.0 -i 10 ".  
-	You can get the right-hand side in figure 9 in the article.  
-	
-	Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
-	A disk whose density profile is e^(-0.5r) and range is r = [0.0:5.0]  
-	is generated. Placement of particles is stated at r = 0.1. The number of  
-	rings at cut edge is set to 1. The output file is "./test.dat".  
+		Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
+		A disk whose density profile is e^(-0.5r) and range is r = [0.0:5.0]  
+		is generated. Placement of particles is stated at r = 0.1. The number of  
+		rings at cut edge is set to 1. The output file is "./test.dat".  
 
-	Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
-	A disk whose density profile is 4r^(-3.0) and range is r = [2.0:4.0]  
-	is generated. Placement of particles is stated at r = 2.0. The number of  
-	rings at cut edge is set to 50.  
+		Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
+		A disk whose density profile is 4r^(-3.0) and range is r = [2.0:4.0]  
+		is generated. Placement of particles is stated at r = 2.0. The number of  
+		rings at cut edge is set to 50.  
 	
-	Enter "./a.out -d 2 -n 40".  
-	A disk whose density profile is r^(-2) and range is r = [1.0:4.0] is generated.  
-	Placement of particles is stated at r = 1.0.  
-	The number of rings at cut edge is set to 20.  
-	The number of particles for each ring is set to 40.  
+		Enter "./a.out -d 2 -n 40".  
+		A disk whose density profile is r^(-2) and range is r = [1.0:4.0] is generated.  
+		Placement of particles is stated at r = 1.0.  
+		The number of rings at cut edge is set to 20.  
+		The number of particles for each ring is set to 40.  
 
 
 3. Output Data  
