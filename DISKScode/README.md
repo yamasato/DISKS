@@ -1,12 +1,12 @@
 # DISKS
 
 ##USAGE
-1.SYNOPSIS  
+1. SYNOPSIS  
 
 Please enter "make" only once and "./a.out".  
 
 
-2.DESCRIPTION  
+2. DESCRIPTION  
 
 In default, the parameters are given below  
 	density profile = r^(-1)  
