@@ -4,6 +4,7 @@ DISKS is a program to generate concentric distribution of equal-mass
 particles to realize disks of a user-specified density distribution by 
 placing particles in concentric rings. All you have to do is choice of 
 a density profile and parameters of a disk.  
+We describe the detail of this algorithm in Yamamoto et al. (in submitted).  
 If you have any question or comment, please do not hesitate to contact 
 us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 
@@ -16,20 +17,20 @@ us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 2. DESCRIPTION  
   
 	In default, the parameters are given below  
-	* density profile = r^(-1)  
-	* inner edge = 1.0  
-	* outer edge = 4.0  
-	* cut   edge = 1.0  
-	* the number of ring at cut edge = 20   
-	* the number of particles in a ring = 40  
-	* (it is used with only power is -2 at cut edge.)  
-	* tolerance = 10^(-8)  
+	density profile = r^(-1)  
+	inner edge = 1.0  
+	outer edge = 4.0  
+	cut   edge = 1.0  
+	the number of ring at cut edge = 20   
+	the number of particles in a ring = 40  
+	(it is used with only power is -2 at cut edge.)  
+	tolerance = 10^(-8)  
   
 	
 	2.1 Density Profile options:  
 	
-	    -d, --denstype TYPE  
-	    create the density profile specified by TYPE.  
+	-d, --denstype TYPE  
+	create the density profile specified by TYPE.  
 
 	|TYPE| density profile type             | function                |
 	|:---|:---------------------------------|:------------------------|
@@ -56,8 +57,8 @@ us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 	* Enter "./a.out -S 2.0 -P -1.2".  
 	  The density profile is set 2r^(-1.2).  
 
-	If you want to choose user defined density profile, please edit  
-	"userdefined.h". Some examples are written in the file.  
+	If you want to choose user defined density profile, please edit "userdefined.h". 
+	Some examples are written in the file.  
   
 	
 	2.2 Disk Parameters options:  
@@ -135,13 +136,13 @@ us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 	
 	* Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
 	  A disk whose density profile is e^(-0.5r) and range is r = [0.0:5.0]  
-	  is generated. Placement of particles is stated at r = 0.1. The number of  
-	  rings at cut edge is set to 1. The output file is "./test.dat".  
+	  is generated. Placement of particles is stated at r = 0.1.  
+	  The number of rings at cut edge is set to 1. The output file is "./test.dat".  
 
 	* Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
 	  A disk whose density profile is 4r^(-3.0) and range is r = [2.0:4.0]  
-	  is generated. Placement of particles is stated at r = 2.0. The number of  
-	  rings at cut edge is set to 50.  
+	  is generated. Placement of particles is stated at r = 2.0.  
+	  The number of rings at cut edge is set to 50.  
 	
 	* Enter "./a.out -d 2 -n 40".  
 	  A disk whose density profile is r^(-2) and range is r = [1.0:4.0] is generated.  
@@ -209,6 +210,8 @@ us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
 	4.13 Error: The cut edge must be in a disk. Please change the parameter of the option -C.  
 	You choose an invalid value of the cut edge. The cut edge must be in a disk.   
 
-We describe the detail of this algorithm in Yamamoto et al. (in submitted).  
+##Author
+Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino
 
+Copyright 2016 Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino
 
