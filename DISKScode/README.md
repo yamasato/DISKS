@@ -4,10 +4,10 @@
 1. SYNOPSIS  
 
 	Please enter "make" only once and "./a.out".  
-
-
+  
+  
 2. DESCRIPTION  
-
+  
 	In default, the parameters are given below  
 		 * density profile = r^(-1)  
 		 * inner edge = 1.0  
@@ -17,7 +17,7 @@
 		 * the number of particles in a ring = 40  
 		 * (it is used with only power is -2 at cut edge.)  
 		 * tolerance = 10^(-8)  
-
+  
 	
 	2.1 Density Profile options:  
 	
