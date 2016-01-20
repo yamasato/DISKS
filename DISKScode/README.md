@@ -1,6 +1,9 @@
 # DISKS
 
 ##USAGE
-1. test1  
-2. test2  
-3. test3  
+1.SYNOPSIS  
+
+Please enter "make" only once and "./a.out".  
+2.DESCRIPTION  
+
+
