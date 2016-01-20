@@ -19,7 +19,7 @@
 	tolerance = 10^(-8)  
 
 	
-2.1 Density Profile options:  
+	2.1 Density Profile options:  
 	
 	-d, --denstype TYPE  
 		create the density profile specified by TYPE.  
@@ -49,7 +49,7 @@
 	"userdefined.h". Some examples are written in the file.  
 	
 	
-2.2 Disk Parameters options:  
+	2.2 Disk Parameters options:  
 
 	-I, --inneredge VALU  
 		change the position of inner edge to VALUE.  
@@ -83,7 +83,7 @@
 	The number of rings at the cut edge is set to 30.  
 
 
-2.3 Other options:  
+	2.3 Other options:  
 	 
 	-o --output FILE
         	write result to FILE instead of standard output [filename].  
@@ -143,6 +143,7 @@
 	(particle id, x-coordinate, y-coordinate, radius, density).  
 	If you do not choose the option -p, values of density is set to 0.  
 	
+
 
 4. Errors  
 
