@@ -17,83 +17,83 @@
 	* the number of particles in a ring = 40  
 	* (it is used with only power is -2 at cut edge.)  
 	* tolerance = 10^(-8)  
-	* PluginフォルダにFastCSVフォルダを設置します。
   
 	
 	2.1 Density Profile options:  
 	
-		-d, --denstype TYPE  
-		create the density profile specified by TYPE.  
+	-d, --denstype TYPE  
+	create the density profile specified by TYPE.  
 
-		TYPE: density profile type               function  
-		1   : power-law except slope = -2        S * r^(P)  
-		2   : power-law with slope = -2          S * r^(-2)  
-		3   : exponential density profile        S * e^(P * r)  
-		4   : post giant impact disk             S * (r - 1) * e^(P * r)  
-		5   : user defined  
+	TYPE: density profile type               function  
+	1   : power-law except slope = -2        S * r^(P)  
+	2   : power-law with slope = -2          S * r^(-2)  
+	3   : exponential density profile        S * e^(P * r)  
+	4   : post giant impact disk             S * (r - 1) * e^(P * r)  
+	5   : user defined  
 
-	-P, --powernumber VALU  
+	-P, --powernumber VALUE  
 		change the parameter P to VALUE.  
 
-	-S, --coefficient VALU  
+	-S, --coefficient VALUE  
 		change the parameter S to VALUE.  
 
-		Examples:  
+	Examples:  
 		
-		Enter "./a.out -d 3 -S 4.0".  
-		The density profile is set 4e^(-r).  
+	* Enter "./a.out -d 3 -S 4.0".  
+	  The density profile is set 4e^(-r).  
 	
-		Enter "./a.out -d 1 -S 2.0 -P -1.2".  
-		The density profile is set 2r^(-1.2).  
+	* Enter "./a.out -d 1 -S 2.0 -P -1.2".  
+	  The density profile is set 2r^(-1.2).  
 	
-		Enter "./a.out -S 2.0 -P -1.2".  
-		The density profile is set 2r^(-1.2).  
+	* Enter "./a.out -S 2.0 -P -1.2".  
+	  The density profile is set 2r^(-1.2).  
 
 	If you want to choose user defined density profile, please edit  
 	"userdefined.h". Some examples are written in the file.  
-	
+  
 	
 	2.2 Disk Parameters options:  
 
-	-I, --inneredge VALU  
+	-I, --inneredge VALUE  
 		change the position of inner edge to VALUE.  
 		It must be a non-negative number or 0.  
 
-	-O, --outeredge VALU  
+	-O, --outeredge VALUE  
 		change the position of outer edge to VALUE.  
 		It must be larger than 0.  
 
-	-C, --cutedge VALU  
+	-C, --cutedge VALUE  
 		change the position of cut edge to VALUE.   
 		It must be larger than 0.  
 
-	-i, --icut VALU  
+	-i, --icut VALUE  
 		change the number of ring at cut edge to VALUE.  
 		It must be integer greater than 0.  
 
-	-n, --npzero VALU  
+	-n, --npzero VALUE  
 		change the number of particles in a ring to VALUE.  
 		It must be integer greater than 0 and is used with only power is -2 
 		at cut edge.  
 
-		Examples:  
-		Enter "./a.out -I 2.0 -O 5.0 -C 3.0 -i 30".  
-		A disk whose range is r = [2.0:5.0] is generated.  
-		Placement of particles is stated at r = 3.0.  
-		The number of rings at the cut edge is set to 30.  
-		Enter "./a.out -O 5.0 -i 30".  
-		A disk whose raige is $r =$ [1.0:5.0] is generated.  
-		Placement of particles is stated at r = 1.0.  
-		The number of rings at the cut edge is set to 30.  
-
-
+	Examples:  
+	
+	* Enter "./a.out -I 2.0 -O 5.0 -C 3.0 -i 30".  
+	  A disk whose range is r = [2.0:5.0] is generated.  
+	  Placement of particles is stated at r = 3.0.  
+	  The number of rings at the cut edge is set to 30.  
+	
+	* Enter "./a.out -O 5.0 -i 30".  
+	  A disk whose raige is $r =$ [1.0:5.0] is generated.  
+	  Placement of particles is stated at r = 1.0.  
+	  The number of rings at the cut edge is set to 30.  
+  
 	2.3 Other options:  
 	 
 	-o --output FILE
         	write result to FILE instead of standard output [filename].  
 	
-		Example:  
-		Enter "./a.out -o test.dat".  
+	Example:  
+	*Enter "./a.out -o test.dat".  
 
 	-t --tolerance VALE  
 		change the value of tolerance to VALUE.  
@@ -107,38 +107,38 @@
 	-h --help  
 		display help.  
 
-		Examples:  
+	Examples:  
 
-		Enter "./a.out ./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
-		You can get the left-hand side in figure 5 in the article.  
+	* Enter "./a.out ./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
+	  You can get the left-hand side in figure 5 in the article.  
 		
-		Enter "./a.out -P -1.9 -i 60 -O 5.0 ".  
-		You can get the right-hand side in figure 5 in the article.  
+	* Enter "./a.out -P -1.9 -i 60 -O 5.0 ".  
+	  You can get the right-hand side in figure 5 in the article.  
 		
-		Enter "./a.out -P -1.45 ".  
-		You can get the right-hand side in figure 6 in the article.  
-		
-		Enter "./a.out -d 3 -P -1.0 -i 15 ".  
-		You can get the left-hand side in figure 9 in the article.  
-	
-		Enter "./a.out -d 4 -P -1.0 -I 2.0 -C 2.0 -i 10 ".  
-		You can get the right-hand side in figure 9 in the article.  
-	
-		Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
-		A disk whose density profile is e^(-0.5r) and range is r = [0.0:5.0]  
-		is generated. Placement of particles is stated at r = 0.1. The number of  
-		rings at cut edge is set to 1. The output file is "./test.dat".  
+	* Enter "./a.out -P -1.45 ".  
+	  You can get the right-hand side in figure 6 in the article.  
 
-		Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
-		A disk whose density profile is 4r^(-3.0) and range is r = [2.0:4.0]  
-		is generated. Placement of particles is stated at r = 2.0. The number of  
-		rings at cut edge is set to 50.  
+	* Enter "./a.out -d 3 -P -1.0 -i 15 ".  
+	  You can get the left-hand side in figure 9 in the article.  
 	
-		Enter "./a.out -d 2 -n 40".  
-		A disk whose density profile is r^(-2) and range is r = [1.0:4.0] is generated.  
-		Placement of particles is stated at r = 1.0.  
-		The number of rings at cut edge is set to 20.  
-		The number of particles for each ring is set to 40.  
+	* Enter "./a.out -d 4 -P -1.0 -I 2.0 -C 2.0 -i 10 ".  
+	  You can get the right-hand side in figure 9 in the article.  
+	
+	* Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
+	  A disk whose density profile is e^(-0.5r) and range is r = [0.0:5.0]  
+	  is generated. Placement of particles is stated at r = 0.1. The number of  
+	  rings at cut edge is set to 1. The output file is "./test.dat".  
+
+	* Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
+	  A disk whose density profile is 4r^(-3.0) and range is r = [2.0:4.0]  
+	  is generated. Placement of particles is stated at r = 2.0. The number of  
+	  rings at cut edge is set to 50.  
+	
+	* Enter "./a.out -d 2 -n 40".  
+	  A disk whose density profile is r^(-2) and range is r = [1.0:4.0] is generated.  
+	  Placement of particles is stated at r = 1.0.  
+	  The number of rings at cut edge is set to 20.  
+	  The number of particles for each ring is set to 40.  
 
 
 3. Output Data  
