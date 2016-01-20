@@ -6,7 +6,7 @@ placing particles in concentric rings. All you have to do is choice of
 a density profile and parameters of a disk.  
 If you have any question or comment, please do not hesitate to contact 
 us. Our e-mail address is 
-Markdown: [](yamamoto.s.an-at-geo.titech.ac.jp).
+Markdown: [yamamoto.s.an-at-geo.titech.ac.jp](yamamoto.s.an-at-geo.titech.ac.jp).
 
 ##USAGE
 1. SYNOPSIS  
@@ -98,7 +98,7 @@ Markdown: [](yamamoto.s.an-at-geo.titech.ac.jp).
   
 	2.3 Other options:  
 	 
-	-o --output FILE
+	-o --output FILE  
         	write result to FILE instead of standard output [filename].  
 	
 	Example:  
