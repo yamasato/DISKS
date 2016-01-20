@@ -5,7 +5,7 @@ particles to realize disks of a user-specified density distribution by
 placing particles in concentric rings. All you have to do is choice of 
 a density profile and parameters of a disk.  
 If you have any question or comment, please do not hesitate to contact 
-us. Our e-mail address is [yamamoto.s.an-at-geo.titech.ac.jp](yamamoto.s.an-at-geo.titech.ac.jp).
+us. Our e-mail address is <yamamoto.s.an-at-geo.titech.ac.jp>.
 
 ##USAGE
 1. SYNOPSIS  
