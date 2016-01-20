@@ -24,12 +24,13 @@
 	-d, --denstype TYPE  
 	create the density profile specified by TYPE.  
 
-	TYPE: density profile type               function  
-	1   : power-law except slope = -2        S * r^(P)  
-	2   : power-law with slope = -2          S * r^(-2)  
-	3   : exponential density profile        S * e^(P * r)  
-	4   : post giant impact disk             S * (r - 1) * e^(P * r)  
-	5   : user defined  
+	|TYPE| density profile type             | function                |
+	|:---|:---------------------------------|:------------------------|
+	|1   | power-law except slope = -2      | S * r^(P)               |
+	|2   | power-law with slope = -2        | S * r^(-2)              |
+	|3   | exponential density profile      | S * e^(P * r)           |
+	|4   | post giant impact disk           | S * (r - 1) * e^(P * r) |
+	|5   | user defined                     | user defined            |
 
 	-P, --powernumber VALUE  
 		change the parameter P to VALUE.  
