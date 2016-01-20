@@ -9,14 +9,14 @@
 2. DESCRIPTION  
 
 	In default, the parameters are given below  
-	density profile = r^(-1)  
-	inner edge = 1.0  
-	outer edge = 4.0  
-	cut   edge = 1.0  
-	the number of ring at cut edge = 20   
-	the number of particles in a ring = 40  
-	(it is used with only power is -2 at cut edge.)  
-	tolerance = 10^(-8)  
+		*density profile = r^(-1)  
+		*inner edge = 1.0  
+		*outer edge = 4.0  
+		*cut   edge = 1.0  
+		*the number of ring at cut edge = 20   
+		*the number of particles in a ring = 40  
+		*(it is used with only power is -2 at cut edge.)  
+		*tolerance = 10^(-8)  
 
 	
 	2.1 Density Profile options:  
@@ -72,15 +72,15 @@
 		It must be integer greater than 0 and is used with only power is -2 
 		at cut edge.  
 
-	Examples:  
-	Enter "./a.out -I 2.0 -O 5.0 -C 3.0 -i 30".  
-	A disk whose range is r = [2.0:5.0] is generated.  
-	Placement of particles is stated at r = 3.0.  
-	The number of rings at the cut edge is set to 30.  
-	Enter "./a.out -O 5.0 -i 30".  
-	A disk whose raige is $r =$ [1.0:5.0] is generated.  
-	Placement of particles is stated at r = 1.0.  
-	The number of rings at the cut edge is set to 30.  
+		Examples:  
+		Enter "./a.out -I 2.0 -O 5.0 -C 3.0 -i 30".  
+		A disk whose range is r = [2.0:5.0] is generated.  
+		Placement of particles is stated at r = 3.0.  
+		The number of rings at the cut edge is set to 30.  
+		Enter "./a.out -O 5.0 -i 30".  
+		A disk whose raige is $r =$ [1.0:5.0] is generated.  
+		Placement of particles is stated at r = 1.0.  
+		The number of rings at the cut edge is set to 30.  
 
 
 	2.3 Other options:  
@@ -196,5 +196,5 @@
 	4.13 Error: The cut edge must be in a disk. Please change the parameter of the option -C.  
 	You choose an invalid value of the cut edge. The cut edge must be in a disk.   
 
-We describe the detail of this algorithm in Yamamoto et al.(in submitted).  
+We describe the detail of this algorithm in Yamamoto et al. (in submitted).  
 
