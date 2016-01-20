@@ -201,3 +201,10 @@
 
 We describe the detail of this algorithm in Yamamoto et al. (in submitted).  
 
+
+##インストール
+* PluginフォルダにFastCSVフォルダを設置します。
+* app/Config/bootstrap.php にて以下の記述を行う。
+    * CakePlugin::load('FastCSV'); 
+    * 目的のコントローラにて以下の記述を行う。
+        * public $helpers = array('FastCSV.FastCSV');
