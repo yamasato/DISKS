@@ -1,5 +1,13 @@
 # DISKS
 
+DISKS is a program to generate concentric distribution of equal-mass 
+particles to realize disks of a user-specified density distribution by 
+placing particles in concentric rings. All you have to do is choice of 
+a density profile and parameters of a disk.  
+If you have any question or comment, please do not hesitate to contact 
+us. Our e-mail address is 
+Markdown: [](yamamoto.s.an-at-geo.titech.ac.jp).
+
 ##USAGE
 1. SYNOPSIS  
 
@@ -94,7 +102,8 @@
         	write result to FILE instead of standard output [filename].  
 	
 	Example:  
-	*Enter "./a.out -o test.dat".  
+	
+	* Enter "./a.out -o test.dat".  
 
 	-t --tolerance VALE  
 		change the value of tolerance to VALUE.  
