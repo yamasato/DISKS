@@ -10,12 +10,12 @@ us. Our e-mail address is <yamamoto.s.an-at-geo.titech.ac.jp>.
 
 ## Usage
 
-1. SYNOPSIS  
+1 SYNOPSIS  
 
 Please enter "make" only once and "./a.out".  
 
 
-2. DESCRIPTION  
+2 DESCRIPTION  
 
 In default, the parameters are given below  
 	density profile = r^(-1)  
@@ -146,14 +146,14 @@ The number of rings at cut edge is set to 20.
 The number of particles for each ring is set to 40.  
 
 
-3. Output Data  
+3 Output Data  
 
 The parameters of particles are outputted. From left to right, the values mean  
 (particle id, x-coordinate, y-coordinate, radius, density).  
 If you do not choose the option -p, values of density is set to 0.  
 
 
-4. Errors  
+4 Errors  
 
 If there are errors in this program, an error message is outputted.  
 	
