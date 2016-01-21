@@ -370,7 +370,7 @@ void Input::read_options(const int argc, char* argv[]){
 	}else if(this->outeredge <= this->tolerance){
 		fprintf(stderr, "Error: Invalid value of the outer edge. Please change the parameter of the option -O. \n");
 		param_error = 1;
-	}else ifelse if(this->cutedge < this->inneredge || this->cutedge > this->outeredge){
+	}else if(this->cutedge < this->inneredge || this->cutedge > this->outeredge){
 		fprintf(stderr, "Error: Invalid value of the cut edge. Please change the parameter of the option -C. \n");
 		param_error = 1;
 	}else if(this->icut <= 0){
