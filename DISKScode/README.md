@@ -21,8 +21,8 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	inner edge = 1.0  
 	outer edge = 4.0  
 	cut   edge = 1.0  
-	(start point to place particles)
-	the number of ring at cut edge = 20   
+	(start point to place particles)  
+	the number of a ring at cut edge = 20   
 	the number of particles in a ring = 40  
 	(it is used with only slope is -2 at cut edge.)  
 	tolerance = 10^(-8)  
@@ -93,7 +93,7 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	  The number of a ring at the cut edge is set to 30.  
 	
 	* Enter "./a.out -O 5.0 -i 30".  
-	  A disk, whose raige is r = [1.0:5.0], is generated.  
+	  A disk, whose range is r = [1.0:5.0], is generated.  
 	  Placement of particles is stated at r = 1.0.  
 	  The number of a ring at the cut edge is set to 30.  
   
@@ -136,7 +136,7 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	  You can get the right-hand side in figure 9 in the article.  
 	
 	* Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
-	  A diski, whose density profile is e^(-0.5r) and range is r = [0.0:3.0], is generated.  
+	  A disk, whose density profile is e^(-0.5r) and range is r = [0.0:3.0], is generated.  
 	  Placement of particles is stated at r = 0.1.  
 	  The number of a ring at the cut edge is set to 1.  
 	  The output file is "./test.dat".  
@@ -166,7 +166,7 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	If there are errors in this program, an error message is outputted.  
 	
 	4.1 Error: The number of iterations for deriving parameters of the ring is over 'number'.  
-	We put a ceiling to iteration for calculating the parameters of particles for the degrees 
+	We put a ceiling to the number of iterations for calculating the parameters of particles for the degrees 
 	of freedom of a tolerace.  
 	If you want to change the maximum number of iterations, please change the parameter 
 	max_iteration (l.30 in main.cc).
@@ -207,8 +207,8 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	4.11 Error: Invalid value of the cut edge. Please change the parameter of the option -C.  
 	You choose an invalid value of the cut edge. The cut edge must be between the inner edge and the outer edge.  
 
-	4.12 Error: Invalid number of a ring at cut edge. Please change the parameter of the option -i.  
-	You choose an invalid number of a ring at cut edge. It must be integer greater than 0.  
+	4.12 Error: Invalid number of a ring at the cut edge. Please change the parameter of the option -i.  
+	You choose an invalid number of a ring at the cut edge. It must be integer greater than 0.  
 
 ##Author
 Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino
