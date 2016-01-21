@@ -6,28 +6,30 @@ placing particles in concentric rings. All you have to do is choice of
 a density profile and parameters of a disk.  
 If you have any question or comment, please do not hesitate to contact 
 us. Our e-mail address is <yamamoto.s.an@geo.titech.ac.jp>.
-We also describe the detail of this algorithm in Yamamoto et al. (in submitted).  
+We also describe the detail of this algorithm in Yamamoto et al. (submitted).  
+
+##INSTALL
+
+Please enter "make" only once and "./a.out".  
 
 ##USAGE
-1. SYNOPSIS  
 
-	Please enter "make" only once and "./a.out".  
+1. DESCRIPTION  
   
+In default, the parameters are given below  
+density profile = r^(-1)  
+inner edge = 1.0  
+outer edge = 4.0  
+cut   edge = 1.0  
+(start point to place particles)  
+the number of a ring at cut edge = 20   
+the number of particles in a ring = 40  
+(it is used with only slope is -2 at cut edge.)  
+tolerance = 10^(-8)  
   
-2. DESCRIPTION  
-  
-	In default, the parameters are given below  
-	density profile = r^(-1)  
-	inner edge = 1.0  
-	outer edge = 4.0  
-	cut   edge = 1.0  
-	(start point to place particles)  
-	the number of a ring at cut edge = 20   
-	the number of particles in a ring = 40  
-	(it is used with only slope is -2 at cut edge.)  
-	tolerance = 10^(-8)  
-  
-	
+
+2. OPTIONS  
+
 	2.1 Density Profile options:  
 	
 	-d, --denstype TYPE  
@@ -118,40 +120,6 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	-h --help  
 		display help.  
 
-	Examples:  
-
-	* Enter "./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
-	  You can get the left-hand side in figure 5 in the article.  
-		
-	* Enter "./a.out -P -1.9 -i 60 -O 5.0 ".  
-	  You can get the right-hand side in figure 5 in the article.  
-		
-	* Enter "./a.out -P -1.45 ".  
-	  You can get the right-hand side in figure 6 in the article.  
-
-	* Enter "./a.out -d 3 -i 15 ".  
-	  You can get the left-hand side in figure 9 in the article.  
-	
-	* Enter "./a.out -d 4 -I 2.0 -C 2.0 -i 10 ".  
-	  You can get the right-hand side in figure 9 in the article.  
-	
-	* Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
-	  A disk, whose density profile is e^(-0.5r) and range is r = [0.0:3.0], is generated.  
-	  Placement of particles is stated at r = 0.1.  
-	  The number of a ring at the cut edge is set to 1.  
-	  The output file is "./test.dat".  
-
-	* Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
-	  A disk, whose density profile is 4r^(-3.0) and range is r = [2.0:4.0], is generated.  
-	  Placement of particles is stated at r = 2.0.  
-	  The number of a ring at the cut edge is set to 50.  
-	
-	* Enter "./a.out -d 2 -n 40".  
-	  A disk, whose density profile is r^(-2) and range is r = [1.0:4.0], is generated.  
-	  Placement of particles is stated at r = 1.0.  
-	  The number of a ring at the cut edge is set to 20.  
-	  The number of particles for each ring is set to 40.  
-
 
 3. Output Data  
 
@@ -210,8 +178,44 @@ We also describe the detail of this algorithm in Yamamoto et al. (in submitted).
 	4.12 Error: Invalid number of a ring at the cut edge. Please change the parameter of the option -i.  
 	You choose an invalid number of a ring at the cut edge. It must be integer greater than 0.  
 
-##Author
-Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino
+
+5. Examples:  
+
+	* Enter "./a.out -d 2 -i 10 -O 5.0 -n 40 ".  
+	  You can get the left-hand side in figure 5 in the article.  
+		
+	* Enter "./a.out -P -1.9 -i 60 -O 5.0 ".  
+	  You can get the right-hand side in figure 5 in the article.  
+		
+	* Enter "./a.out -P -1.45 ".  
+	  You can get the right-hand side in figure 6 in the article.  
+
+	* Enter "./a.out -d 3 -i 15 ".  
+	  You can get the left-hand side in figure 9 in the article.  
+	
+	* Enter "./a.out -d 4 -I 2.0 -C 2.0 -i 10 ".  
+	  You can get the right-hand side in figure 9 in the article.  
+	
+	* Enter "./a.out -d 3 -S 1.0 -P -0.5 -I 0.0 -O 3.0 -C 0.1 -i 1 -o test.dat".  
+	  A disk, whose density profile is e^(-0.5r) and range is r = [0.0:3.0], is generated.  
+	  Placement of particles is stated at r = 0.1.  
+	  The number of a ring at the cut edge is set to 1.  
+	  The output file is "./test.dat".  
+
+	* Enter "./a.out -S 4.0 -P -3.0 -I 2.0 -C 2.0 -i 50".  
+	  A disk, whose density profile is 4r^(-3.0) and range is r = [2.0:4.0], is generated.  
+	  Placement of particles is stated at r = 2.0.  
+	  The number of a ring at the cut edge is set to 50.  
+	
+	* Enter "./a.out -d 2 -n 40".  
+	  A disk, whose density profile is r^(-2) and range is r = [1.0:4.0], is generated.  
+	  Placement of particles is stated at r = 1.0.  
+	  The number of a ring at the cut edge is set to 20.  
+	  The number of particles for each ring is set to 40.  
+
+
+##Authors
+Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino  
 
 Copyright 2016- Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino
 
