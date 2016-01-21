@@ -11,7 +11,7 @@
 #include "wendland-62.h"
 const static int max_number_of_ring = 1000;
 
-//p og p-gon
+//p of p-gon
 int pgon(const double r, const double psign, const DensityProfile& dp){
 	const double x = M_PI * (dp.powerindex(r) + 2.0);
 	return (fabs(x) > 0.5) ? static_cast<int>(psign * round(x)) : 0;
