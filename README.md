@@ -15,17 +15,17 @@ Please enter "make" only once and "./a.out".
 ##USAGE
 
 1. DESCRIPTION  
-  
-In default, the parameters are given below  
-density profile = r^(-1)  
-inner edge = 1.0  
-outer edge = 4.0  
-cut   edge = 1.0  
-(start point to place particles)  
-the number of a ring at cut edge = 20   
-the number of particles in a ring = 40  
-(it is used with only slope is -2 at cut edge.)  
-tolerance = 10^(-8)  
+
+	In default, the parameters are given below  
+	density profile = r^(-1)  
+	inner edge = 1.0  
+	outer edge = 4.0  
+	cut   edge = 1.0  
+	(start point to place particles)  
+	the number of a ring at cut edge = 20   
+	the number of particles in a ring = 40  
+	(it is used with only slope is -2 at cut edge.)  
+	tolerance = 10^(-8)  
   
 
 2. OPTIONS  
