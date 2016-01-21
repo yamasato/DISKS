@@ -16,7 +16,6 @@ public:
 
 	void read_options(const int argc, char* argv[]);
 };
-char ffname[80] = "test.dat" ;
 //リングの情報
 class Ring{
 public:
