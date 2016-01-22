@@ -357,7 +357,7 @@ void Input::read_options(const int argc, char* argv[]){
 			break;
 		default:
                 	fprintf(stderr, "Error: Invalid option \'%c\'.\n", opt);
-			exit(1);
+			break;
         	}
     	}
 	int param_error = 0;
