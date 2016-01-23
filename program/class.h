@@ -1,6 +1,6 @@
 #include <string>
 
-//ユーザーが入れる情報
+//user defined
 class Input{
 public:
 	double inneredge; 
@@ -16,7 +16,7 @@ public:
 
 	void read_options(const int argc, char* argv[]);
 };
-//リングの情報
+//parameters of a ring
 class Ring{
 public:
 	double r;
@@ -24,7 +24,7 @@ public:
 	int    p;
 };
 
-//粒子の情報
+//parameters of a particle
 class Particle{
 public:
 	double volu;
