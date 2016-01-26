@@ -209,10 +209,10 @@ Please enter "make" to compile and "./a.out" to execute.
 
 #Recent Updates
 Ver.1.1  
-	* Density profile with variable parameters is supported.
-	* The options to choose parameters of a density profile is unified from -P and -S to -P.
-	* We get rid of the error that there is an maximum value of the memory of the number of rings.
-	* Small bugs are fixed.
+	* Density profile with variable parameters is supported.  
+	* The options to choose parameters of a density profile is unified from -P and -S to -P.  
+	* We get rid of the error that there is an maximum value of the memory of the number of rings.  
+	* Small bugs are fixed.  
 
 ##Authors
 Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino  
