@@ -1,3 +1,4 @@
+#pragma once
 //density profile
 class PowerLawDisk;
 class LogMassDisk;
@@ -19,7 +20,14 @@ class PowerLawDisk : public DensityProfile{
 	//Ar^(B)
 	double A, B; 
 public:
-	PowerLawDisk(const double *A_) {
+	PowerLawDisk(doublevector A_) {
+		for(std::size_t i = A_.size(); i < 2; ++i){
+			if(i == 0){
+        			A_.push_back(1.0);
+			}else{
+        			A_.push_back(-1.0);
+			}
+		}
 		A = A_[0];
 		B = A_[1];
 	}
@@ -44,11 +52,15 @@ public:
 	~PowerLawDisk() {}
 };
 
+
 class LogMassDisk : public DensityProfile{
 	//Ar^(-2)
 	double A;
 public:
-	LogMassDisk(const double *A_) {
+	LogMassDisk(doublevector A_) {
+		for(std::size_t i = A_.size(); i < 1; ++i){
+        		A_.push_back(1.0);
+		}
 		A = A_[0];
 	}
 	double graddens(double r) const { return -2.0 * A / (r * r * r); }
@@ -61,7 +73,14 @@ class ExponentialDisk : public DensityProfile{
 	//Aexp(Br)
 	double A, B;
 public:
-	ExponentialDisk(const double *A_) {
+	ExponentialDisk(doublevector A_) {
+		for(std::size_t i = A_.size(); i < 2; ++i){
+			if(i == 0){
+        			A_.push_back(1.0);
+			}else{
+        			A_.push_back(-1.0);
+			}
+		}
 		A = A_[0];
 		B = A_[1];
 	}
@@ -75,10 +94,17 @@ class PostImpactDisk : public DensityProfile{
 	//(Ar + B)exp(Cr)
 	double A, B, C;
 public:
-	PostImpactDisk(const double *A_) {
+	PostImpactDisk(doublevector A_) {
+		for(std::size_t i = A_.size(); i < 3; ++i){
+			if(i == 0){
+        			A_.push_back(1.0);
+			}else{
+        			A_.push_back(-1.0);
+			}
+		}
 		A = A_[0]; 
-		B = -A_[0]; 
-		C = A_[1]; 
+		B = A_[1]; 
+		C = A_[2]; 
 	}
 	double graddens(double r) const { return ((A * r + B) * C + A) * exp(C * r); }
 	double surfacedens(double r) const { return (A * r + B) * exp(C * r); }

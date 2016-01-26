@@ -1,3 +1,4 @@
+#pragma once
 template <typename type> inline type pow8(const type x){
 	const double x_mult2 = x       * x;
 	const double x_mult4 = x_mult2 * x_mult2;
