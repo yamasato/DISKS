@@ -213,8 +213,8 @@ Ver.1.1
 	* The options to choose parameters of a density profile is unified from -P and -S to -P.  
 	* We get rid of the error that there is an maximum value of the memory of the number of rings.  
 	* Small bugs are fixed.  
-Ver.1.1.1
-    * We can compile this code with C++11 and C++03.  
+Ver.1.1.1  
+	* We can compile this code with C++11 and C++03.  
 
 ##Authors
 Satoko Yamamoto, Natsuki Hosono, Yoko Funato, Junichiro Makino  
