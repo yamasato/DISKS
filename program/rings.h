@@ -75,7 +75,8 @@ public:
 				exit(1);
 			}
 		}
-		return {.r = pre_ite_r, .N = N, .p = pre_ite_p};
+		Ring a = {.r = pre_ite_r, .N = N, .p = pre_ite_p};
+		return a;
 	}
 };
 

@@ -23,8 +23,8 @@ template <class F> class DiskCreator{
 	const DensityProfile * const dp;
 	const Input usr;
 	double mass, psign, rend;
-	int    number_of_particle = 0;
-	int    number_of_ring     = 0;
+	int number_of_particle;
+	int number_of_ring;	
 	std::vector<Ring> iring;
 	std::vector<Particle> par;
 
@@ -35,6 +35,8 @@ public:
 	}
 
 	int make_disk(){
+		number_of_particle = 0;
+		number_of_ring = 0;
 		set_cut_point();
 		//from inner edge to outer edge
 		rend  = usr.outeredge;
@@ -91,7 +93,8 @@ public:
 			fprintf(stderr, "Error: Please change the cutedge or the inner edge by changing the parameter of the option -C or -I. \n");
 			exit(1);
 		}
-		iring.push_back( {.r = usr.cutedge, .N = N_cut, .p = static_cast<int>(pint)} );
+		Ring a = {.r = usr.cutedge, .N = N_cut, .p = static_cast<int>(pint)};
+		iring.push_back(a);
 	}
 
 	void put_iring(){
@@ -109,7 +112,9 @@ public:
 
 			//Inner edge = 0
 			if(fabs(iring[number_of_ring].r) < usr.tolerance && iring[number_of_ring].N == 0){
-				iring[number_of_ring] = {0.0, 1, 1};
+				iring[number_of_ring].r = 0.0;
+				iring[number_of_ring].N = 1;
+				iring[number_of_ring].p = 1;
 				number_of_ring += 1;
 				break;
 			}
@@ -139,7 +144,8 @@ public:
 				}else{
 					vol = fabs(iring[i].r - iring[0].r);
 				}
-				par.push_back( {.x = x, .y = y, .volu = vol, .dens = 0.0} );
+				Particle a = {x, y, vol, 0.0};
+				par.push_back(a);
 			}
 			number_of_particle += iring[i].N;
 		}
